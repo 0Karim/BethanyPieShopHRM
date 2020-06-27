@@ -8,6 +8,10 @@
         <h1 class="page-title">Details For @Employee.FirstName @Employee.LastName</h1>
 
         <EditForm Model="@Employee" OnValidSubmit="@HandleValidSubmit" OnInvalidSubmit="@HandleInvalidSubmit">
+
+            <DataAnnotationsValidator></DataAnnotationsValidator>
+            <ValidationSummary></ValidationSummary>
+
             <div class="form-group row">
                 <label class="col-sm-3" for="@Employee.FirstName">First Name: </label>
                 <InputText id="firstName" class="form-control col-sm-8" @bind-Value="@Employee.FirstName" placeholder="Enter First Name"></InputText>
